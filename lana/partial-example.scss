@@ -1,0 +1,9 @@
+// file: partial-example.scss
+
+@import "partial"; // When importing, don't include the underscore
+
+body {
+  font-family: Helvetica, sans-serif;
+  font-size: 20px;
+  color: $sass-pink; // sass-pink from _partial.scss
+}

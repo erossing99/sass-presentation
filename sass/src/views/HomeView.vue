@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <img alt="Sass logo" src="../assets/sass.png">
+    <h1>Welcome to our Sass presentation!</h1>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from '@/components/HelloWorld.vue'
 
 export default {
   name: 'HomeView',
-  components: {
-    HelloWorld
-  }
 }
 </script>
+
+<style scoped lang="scss">
+$logo-height: 200px; 
+$logo-width: 250px; 
+
+img {
+  height: $logo-height;
+  width: $logo-width;
+}
+
+</style>

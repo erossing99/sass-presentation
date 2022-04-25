@@ -1,3 +1,16 @@
 // file: _module.scss
 
 // _module.scss is a partial file
+@use "sass:color";
+
+$font-stack: Avenir, Helvetica, Arial, sans-serif;
+
+$sass-pink: #e86ba9;
+
+// @debug rule and built-in color module
+
+@debug "Alpha Value: #{color.alpha($sass-pink)}"; // alpha()
+
+@debug "Red Value: #{color.red($sass-pink)}"; // red()
+
+@debug "Complement Value: #{color.complement($sass-pink)}"; // complement()

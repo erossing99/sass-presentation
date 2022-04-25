@@ -2,3 +2,8 @@
 
 // @use rule
 @use "module"; // Leave out underscore again
+
+body {
+  font-family: module.$font-stack;
+  color: module.$sass-pink;
+}

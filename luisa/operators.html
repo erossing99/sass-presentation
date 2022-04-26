@@ -1,16 +1,3 @@
-# Script
-now, I will talk about operators. Sass support relational, numeric, boolean, string and equality operators for working with different values.
-these operators are pretty straightfoward to use but they can save us from writing unnecerary lines of code while making the use of variables, mixins, and functions a little bit more fun.  
-
-## relational operators
-so lets start with relational operators. relational operators determine whether numbers are larger
-or smaller than one another.
-
-lets see an example of using sass with a regular html webpage. 
-
-**copy snippet**  
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,7 +9,7 @@ lets see an example of using sass with a regular html webpage.
     <title>Document</title>
 </head>
 <body style="background-color: rgb(181, 183, 185);">
-    <div class="relational">
+    <div class="relational" style="margin: 30px;">
         <h1>operators</h1>
         
         <form class="pure-form pure-form-stacked" method="POST">
@@ -49,71 +36,10 @@ lets see an example of using sass with a regular html webpage.
         <input class="submit-btn" type="submit" value="Submit">
         <input class="reset-btn" type="reset" value="Reset">
         <input class="button-btn" type="button" value="Button" onclick="alert('This is the help button')">
+
     </div>
 
-</body>
-</html>
-
-```
-
- Here we have a simple html page with a form that uses different type of buttons, and we want to color them differently. we want the submit button to be colored green, the
- reset button colored blue and the other button colored yellow.
-
- we can easily do this with code:
-
-
-```scss
-$list-map: (submit: lightgreen, reset: lightblue, button: yellow)
-
-@mixin button-state($btn-state)
-    @if (length($list-map) > 2 or length($list-map) < 5)
-        background-color: map-get($list-map, $btn-state)
-
-.submit-btn
-    @include button-state(submit)
-
-.reset-btn
-    @include button-state(reset)
-
-.button-btn
-    @include button-state(button)
-
-//TESTS
-@debug 10px == 10px //true
-@debug 100 < 50  // false
-@debug 10px < 17px  // true
-@debug 96px >= 1in  // true
-@debug 1000ms <= 1s  // true
-
-```
-
-Here we define a list map, which contains states as keys and colors as values. Then, we use the relational operators and logical operator 'or' to evaluate list length. If the entire condition evaluates to true, we apply a background-color to the element.
-
-since we are using a regular html webpage we now need to compile the sass file to css. We can use the following command:
-
-```
-sass operators.sass operators.css
-```
-or
-    
-```
-sass --watch operators.sass:operators.css
-```
-the watch flag tells Sass to watch your source files for changes, and re-compile CSS each time you save your Sass input file.
-
-now you can see the buttons background color just changed.
-
-This can also be done using the equality operators.
-
-## Equality operators
-the equality operators determine whether two values or expressions are equal.
-
-so lets say I want to make a website about my top 3 favorite videogames.
-
-here is a simple template for that.
-
-```html
-<div class="pure-g equality" style="margin: 30px;"">
+    <div class="pure-g equality" style="margin: 30px;"">
         <h1 class="title">Top 3 Favorite Videogames</h1>
 
         <div class="pure-u-1 pure-u-md-1-3 game">
@@ -156,65 +82,5 @@ here is a simple template for that.
             </div>
         </div>
     </div>
-```
-
-now lets give this a little bit of sass.
-
-here are some variables with rgb values.
-
-now we just need to add some mixin rules.
-
-```scss
-$title-color: rgb(52,79,161) //blue
-$subtitle-color: rgba(17, 238, 91, 0.877) //green
-$text-color: rgb(238, 186, 17) //yellow
-$border-color: rgba(77, 57, 85, 0.767)
-
-
-@mixin text-style($type)
-    @if $type == "title"
-        color: $title-color
-        font-weight: bold
-        font-size: 5em
-        font-family: "Arial", sans-serif
-        margin: 10px
-
-    @else if $type == "subtitle"
-        color: $subtitle-color
-        font-size: 2em
-        font-family: "reilly", serif
-        margin: 20px
-
-    @else if $type == "text"
-        color: $text-color
-        font-weight: normal
-        font-size: 1.2em
-        font-family: "Arial", sans-serif
-        margin: 20px
-        padding: 10px
-        border: 1px solid rgba(17, 238, 91, 0.877)
-
-@mixin div-style($type)
-    @if $type == "game"
-        border: 6px solid $border-color
-        background-color: rgb(52,79,161)
-        margin: 10px
-        border-radius: 10px
-        display: flex
-    @else if $type == "img"
-        border-radius: 10px
-        margin: 10px
-
-
-.title
-    @include text-style(title)
-.subtitle
-    @include text-style(subtitle)
-.text
-    @include text-style(text)
-.game
-    @include div-style(game)
-.img
-    @include div-style(img)
-    
-```
+</body>
+</html>

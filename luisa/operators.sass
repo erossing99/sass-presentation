@@ -1,0 +1,81 @@
+$list-map: (submit: lightgreen, reset: lightblue, button: yellow)
+
+@mixin button-state($btn-state)
+    @if (length($list-map) > 2 or length($list-map) < 5)
+        background-color: map-get($list-map, $btn-state)
+
+
+.submit-btn
+    @include button-state(submit)
+
+.reset-btn
+    @include button-state(reset)
+
+.button-btn
+    @include button-state(button)
+
+//TESTS
+// @debug 10px == 10px //true
+// @debug 100 < 50  // false
+// @debug 10px < 17px  // true
+// @debug 96px >= 1in  // true
+// @debug 1000ms <= 1s  // true
+
+
+
+    
+$blue-color: rgb(52,79,161) //blue , background
+$green-color: rgba(17, 238, 91, 0.877) //green
+$yellow-color: rgb(238, 186, 17) //yellow
+$border-color: rgba(77, 57, 85, 0.767)
+$font-size: 5em
+$tenpx: 10px
+$border-size: 1px
+
+
+
+@mixin text-style($type)
+    @if $type == "title"
+        color: $blue-color
+        font-weight: bold
+        font-size: $font-size
+        font-family: "Arial", sans-serif
+        margin: $tenpx
+
+    @else if $type == "subtitle"
+        color: $green-color
+        font-size: $font-size
+        font-family: "reilly", serif
+        margin: $tenpx
+
+    @else if $type == "text"
+        color: $yellow-color
+        font-size: $font-size
+        font-family: "Arial", sans-serif
+        margin: $tenpx
+        padding: $tenpx
+        border: $border-size solid $green-color
+
+@mixin div-style($type)
+    @if $type == "game"
+        border: $border-size solid $border-color
+        background-color: $blue-color
+        margin: $tenpx
+        border-radius: $tenpx
+        display: flex
+    @else if $type == "img"
+        border-radius: $tenpx
+        margin: $tenpx
+
+
+.title
+    @include text-style(title)
+.subtitle
+    @include text-style(subtitle)
+.text
+    @include text-style(text)
+.game
+    @include div-style(game)
+.img
+    @include div-style(img)
+    

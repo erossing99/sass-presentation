@@ -1,0 +1,50 @@
+.submit-btn {
+  background-color: lightgreen;
+}
+
+.reset-btn {
+  background-color: lightblue;
+}
+
+.button-btn {
+  background-color: yellow;
+}
+
+.title {
+  color: rgb(52, 79, 161);
+  font-weight: bold;
+  font-size: 5em;
+  font-family: "Arial", sans-serif;
+  margin: 10px;
+}
+
+.subtitle {
+  color: rgba(17, 238, 91, 0.877);
+  font-size: 5em;
+  font-family: "reilly", serif;
+  margin: 10px;
+}
+
+.text {
+  color: rgb(238, 186, 17);
+  font-size: 5em;
+  font-family: "Arial", sans-serif;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid rgba(17, 238, 91, 0.877);
+}
+
+.game {
+  border: 1px solid rgba(77, 57, 85, 0.767);
+  background-color: rgb(52, 79, 161);
+  margin: 10px;
+  border-radius: 10px;
+  display: flex;
+}
+
+.img {
+  border-radius: 10px;
+  margin: 10px;
+}
+
+/*# sourceMappingURL=operators.css.map */

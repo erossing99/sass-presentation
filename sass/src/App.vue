@@ -2,7 +2,8 @@
   <div id="app">
     <nav>
       <router-link to="/sass">Sass</router-link> |
-      <router-link to="/github">Our GitHub</router-link>
+      <router-link to="/github">Our GitHub</router-link> |
+      <router-link to="/operator">Operators</router-link>
     </nav>
     <router-view/>
   </div>

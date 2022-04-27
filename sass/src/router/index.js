@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import OperatorView  from '../views/OperatorView.vue'
 
 Vue.use(VueRouter)
 
@@ -23,6 +24,11 @@ const routes = [
     beforeEnter() {
       window.open('https://github.com/erossing99/sass-presentation')
     },
+  },
+  {
+    path: '/operators',
+    name: 'operators',
+    component: OperatorView
   }
 ]
 

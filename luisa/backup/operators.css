@@ -13,21 +13,21 @@
 .title {
   color: rgb(52, 79, 161);
   font-weight: bold;
-  font-size: 4em;
+  font-size: 5em;
   font-family: "Arial", sans-serif;
   margin: 10px;
 }
 
 .subtitle {
   color: rgba(17, 238, 91, 0.877);
-  font-size: 2em;
+  font-size: 2.5em;
   font-family: "cambria", sans-serif;
   margin: 20px;
 }
 
 .text {
   color: rgb(238, 186, 17);
-  font-size: 1.1428571429em;
+  font-size: 1.4285714286em;
   font-family: "helvetica", sans-serif;
   margin: 20px;
   padding: 10px;
@@ -39,7 +39,7 @@
   border: 6px solid rgba(77, 57, 85, 0.767);
   background-color: rgb(52, 79, 161);
   margin: 10px;
-  border-radius: 30px;
+  border-radius: 10px;
   display: flex;
 }
 
@@ -51,7 +51,7 @@
 li {
   color: rgb(52, 79, 161);
   font-weight: bold;
-  font-size: 4em;
+  font-size: 5em;
   font-family: "Arial", sans-serif;
   margin: 10px;
 }
